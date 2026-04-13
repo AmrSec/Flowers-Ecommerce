@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Florist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#f45d96' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-[#0f0f0f] pt-24 transition-colors duration-300">
+
+    <nav class="fixed top-0 left-0 right-0 bg-white dark:bg-[#1a1a1a] shadow-sm z-50 py-4 px-8 flex justify-between items-center">
+        <div class="nav__logo text-2xl font-bold text-primary">FLORIST</div>
+        <ul class="flex items-center gap-8 text-sm font-bold text-gray-700 dark:text-gray-200">
+            <li><a href="home.html" class="hover:text-primary transition">HOME</a></li>
+            <li><a href="all-products.html" class="text-primary">SHOP</a></li>
+            <li><i class="fa-solid fa-moon theme cursor-pointer text-xl"></i></li>
+            <li class="relative">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span class="cart-number absolute -top-2 -right-2 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <span class="text-primary font-medium tracking-widest uppercase text-sm">Our Collection</span>
+            <h2 class="text-4xl font-bold dark:text-white mt-2">All Products</h2>
+        </div>
+
+        <div class="flex justify-center mb-10">
+            <ul id="filter-list" class="flex flex-wrap gap-4 md:gap-8 justify-center">
+                <li class="cursor-pointer text-primary border-b-2 border-primary pb-1 font-bold" data-category="all">All</li>
+                <li class="cursor-pointer text-gray-400 hover:text-primary transition pb-1" data-category="Bouquet">Bouquet</li>
+                <li class="cursor-pointer text-gray-400 hover:text-primary transition pb-1" data-category="Flower box">Flower box</li>
+                <li class="cursor-pointer text-gray-400 hover:text-primary transition pb-1" data-category="Flower shelf">Flower shelf</li>
+                <li class="cursor-pointer text-gray-400 hover:text-primary transition pb-1" data-category="Gift combos">Gift combos</li>
+            </ul>
+        </div>
+
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+    </section>
+
+    <script src="../js/humbergermenue.js"></script>
+    <script src="../js/all-products.js"></script>
+</body>
+</html>

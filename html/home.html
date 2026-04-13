@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#f45d96', darkBg: '#0f0f0f', darkCard: '#1a1a1a' },
+                    fontFamily: { quicksand: ['Quicksand', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Florist - Home</title>
+</head>
+<body class="font-quicksand bg-[#f9f9f9] dark:bg-darkBg dark:text-gray-200 pt-24 transition-colors duration-300">
+    <nav class="flex justify-between items-center px-6 py-4 lg:px-12 fixed top-0 left-0 right-0 bg-white dark:bg-darkCard z-[1000] shadow-md transition-colors duration-300">
+        <div class="nav__logo">
+            <img src="../images/logo.png" class="h-10 lg:h-12" alt="logo">
+        </div>
+        <div class="hidden lg:block">
+            <ul class="flex gap-8 items-center list-none font-semibold text-sm tracking-widest">
+                <li><a href="./home.html" class="text-primary border-b-2 border-primary pb-1">HOME</a></li>
+                <li><a href="./all-products.html" class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors uppercase">Products</a></li>
+                <li><a href="./login.html" class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors uppercase">Login</a></li>
+                <li><i class="fa-solid fa-moon theme cursor-pointer text-xl text-gray-600 hover:text-primary transition-all"></i></li>
+                <li class="relative">
+                    <a href="../html/cart.html" class="text-gray-700 dark:text-gray-200 hover:text-primary">
+                        <span class="cart-number absolute -top-3 -right-3 bg-primary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">0</span>
+                        <i class="fa-solid fa-cart-plus text-xl"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="relative h-[70vh] bg-pink-100 flex items-center px-10 lg:px-32 overflow-hidden">
+        <div class="max-w-xl z-10">
+            <span class="text-primary font-bold tracking-[4px] text-sm uppercase">Fresh Flowers</span>
+            <h1 class="text-5xl lg:text-7xl font-bold mt-4 mb-8 leading-tight dark:text-gray-800">Natural & Beautiful Flowers</h1>
+            <a href="all-products.html" class="inline-block bg-primary text-white px-8 py-4 rounded-sm font-bold tracking-widest hover:bg-black transition-colors uppercase">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 lg:px-32">
+        <div class="text-center mb-12">
+            <span class="text-primary font-bold tracking-widest">OUR FLOWER</span>
+            <h2 class="text-4xl font-bold mt-2 dark:text-white">New Arrivals</h2>
+        </div>
+        <div class="products-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="products-grid"></div>
+    </section>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/humbergermenue.js"></script>
+</body>
+</html>

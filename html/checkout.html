@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#f45d96' } } } }
+    </script>
+    <title>Checkout</title>
+</head>
+<body class="bg-[#f8f9fa] pt-24 px-6 lg:px-20 font-sans">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div class="space-y-8">
+            <h2 class="text-2xl font-bold border-b pb-4">Shipping Information</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <input type="text" placeholder="First Name" required class="p-4 border rounded-xl outline-none focus:border-primary">
+                <input type="text" placeholder="Last Name" required class="p-4 border rounded-xl outline-none focus:border-primary">
+            </div>
+            <input type="email" placeholder="Email Address" required class="w-full p-4 border rounded-xl outline-none focus:border-primary">
+            <input type="text" placeholder="Address Line" required class="w-full p-4 border rounded-xl outline-none focus:border-primary">
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg h-fit space-y-6">
+            <h2 class="text-2xl font-bold">Your Order</h2>
+            <div class="checkout__products space-y-4 border-b pb-6 text-sm"></div>
+            <div class="flex justify-between items-center bg-gray-50 p-4 rounded-xl">
+                <input type="text" id="coupon-input" placeholder="Coupon" class="bg-transparent outline-none flex-grow">
+                <button id="apply-coupon" class="text-primary font-bold">Apply</button>
+            </div>
+            <div class="space-y-2 font-medium">
+                <div class="flex justify-between"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+                <div class="flex justify-between"><span>Shipping</span><span>$10.00</span></div>
+                <div class="flex justify-between text-2xl font-bold pt-4"><span>Total</span><span id="final-total" class="text-primary">$0.00</span></div>
+            </div>
+            <button class="checkout__place-order-btn w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-black transition-all">Place Order</button>
+            <p id="order-placed" class="text-green-600 text-center font-bold"></p>
+        </div>
+    </div>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>
